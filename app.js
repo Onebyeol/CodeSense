@@ -101,10 +101,20 @@ codeInput.addEventListener('keydown', e => {
 // =============================================
 function openResult() {
   layout.classList.add('expanded');
+  // 모바일에서 결과창으로 부드럽게 스크롤
+  if (window.innerWidth <= 768) {
+    setTimeout(() => {
+      document.getElementById('result-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 420);
+  }
 }
 
 function closeResult() {
   layout.classList.remove('expanded');
+  // 모바일에서 입력창으로 스크롤 복귀
+  if (window.innerWidth <= 768) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
 
 // =============================================
@@ -201,9 +211,11 @@ function toggleTheme() {
   localStorage.setItem('cs_theme', isLight ? 'light' : 'dark');
 }
 
-// 저장된 테마 복원
+// 저장된 테마 복원 (기본값: 라이트 모드)
 (function restoreTheme() {
-  if (localStorage.getItem('cs_theme') === 'light') {
+  const saved = localStorage.getItem('cs_theme');
+  // 저장값이 없거나 'light'면 라이트 모드
+  if (saved !== 'dark') {
     document.documentElement.classList.add('light');
     btnTheme.textContent = '다크 모드';
   }
