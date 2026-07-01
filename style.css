@@ -128,17 +128,15 @@ html.light .nav {
 
 /* 로고 이미지 */
 .logo-img {
-  width: 34px; height: 34px;
+  width: 42px; height: 42px;
   object-fit: contain;
   flex-shrink: 0;
-  /* 다크모드에서 흰 배경 제거 */
-  mix-blend-mode: normal;
 }
 
 /* CodeSense 텍스트 */
 .logo-name {
   font-family: 'Paperozi', var(--sans);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--text);
   letter-spacing: -0.01em;
@@ -150,7 +148,7 @@ html.light .nav {
   background: var(--bg3);
   border: 1px solid var(--border2);
   color: var(--text2); border-radius: 8px; padding: 0 14px; height: 34px;
-  font-size: 13px; font-weight: 500; font-family: var(--sans);
+  font-size: 15px; font-weight: 500; font-family: var(--sans);
   cursor: pointer; display: flex; align-items: center; gap: 6px;
   transition: all .2s; white-space: nowrap;
   backdrop-filter: blur(8px);
@@ -192,7 +190,7 @@ html.light .nav {
 .layout.expanded .hero-area { display: none; }
 
 .hero-title {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
   font-weight: 700; letter-spacing: -0.02em;
   color: var(--text); margin-bottom: .65rem;
   /* 텍스트 그라데이션 */
@@ -207,7 +205,7 @@ html.light .hero-title {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.hero-sub { font-size: 15px; color: var(--text2); }
+.hero-sub { font-size: 17px; color: var(--text2); }
 
 /* =============================================
    INPUT CARD
@@ -246,7 +244,7 @@ html.light .hero-title {
 .lang-select {
   background: var(--bg3); border: 1px solid var(--border2);
   color: var(--text); border-radius: 8px; padding: 5px 10px;
-  font-size: 13px; font-family: var(--sans); cursor: pointer; outline: none;
+  font-size: 15px; font-family: var(--sans); cursor: pointer; outline: none;
   backdrop-filter: blur(8px);
 }
 .lang-select:focus { border-color: var(--blue); }
@@ -255,7 +253,7 @@ html.light .hero-title {
 .tab {
   background: none; border: 1px solid var(--border2);
   color: var(--text2); border-radius: 7px; padding: 5px 12px;
-  font-size: 12px; font-family: var(--sans); cursor: pointer;
+  font-size: 14px; font-family: var(--sans); cursor: pointer;
   transition: all .18s;
 }
 .tab:hover { border-color: var(--blue); color: var(--text); }
@@ -275,14 +273,14 @@ html.light .hero-title {
 }
 .line-num {
   display: block; text-align: right; padding-right: 10px;
-  font-family: var(--mono); font-size: 13px; line-height: 24px;
-  color: var(--text3); height: 24px;
+  font-family: var(--mono); font-size: 14px; line-height: 26px;
+  color: var(--text3); height: 26px;
 }
 textarea#code-input {
   width: 100%; min-height: 220px; max-height: 55vh;
   background: transparent; color: var(--text);
   border: none; outline: none; resize: none;
-  font-family: var(--mono); font-size: 13px; line-height: 24px;
+  font-family: var(--mono); font-size: 15px; line-height: 26px;
   padding: 16px 16px 16px 60px;
   tab-size: 2; caret-color: var(--blue);
   transition: min-height .3s;
@@ -296,12 +294,12 @@ textarea#code-input::placeholder { color: var(--text3); }
   padding: 12px 16px;
   border-top: 1px solid var(--border);
 }
-.footer-hint { font-size: 12px; color: var(--text3); }
+.footer-hint { font-size: 14px; color: var(--text3); }
 
 .btn-analyze {
   background: linear-gradient(135deg, var(--blue), var(--purple));
   color: #fff; border: none; border-radius: 10px; padding: 10px 22px;
-  font-size: 14px; font-weight: 600; cursor: pointer; font-family: var(--sans);
+  font-size: 16px; font-weight: 600; cursor: pointer; font-family: var(--sans);
   display: flex; align-items: center; gap: 8px;
   transition: opacity .2s, transform .15s, box-shadow .2s;
   box-shadow: 0 0 22px var(--blueGlow);
@@ -329,7 +327,7 @@ textarea#code-input::placeholder { color: var(--text3); }
   padding: 14px 20px; flex-shrink: 0;
   border-bottom: 1px solid var(--border);
 }
-.result-header h2 { font-size: 14px; font-weight: 600; color: var(--text); white-space: nowrap; }
+.result-header h2 { font-size: 16px; font-weight: 600; color: var(--text); white-space: nowrap; }
 .result-actions { display: flex; gap: 8px; }
 
 .btn-icon {
@@ -347,12 +345,12 @@ textarea#code-input::placeholder { color: var(--text3); }
   align-items: center; justify-content: center;
   text-align: center; gap: 10px; opacity: .4;
 }
-.result-empty-icon { font-size: 36px; }
-.result-empty p { font-size: 13px; color: var(--text3); }
+.result-empty-icon { font-size: 42px; }
+.result-empty p { font-size: 15px; color: var(--text3); }
 
 .result-text {
   font-family: 'Paperozi', var(--mono);
-  font-size: 16px; font-weight: 400; line-height: 2.0;
+  font-size: 18px; font-weight: 400; line-height: 2.0;
   color: var(--text); white-space: pre-wrap; word-break: break-word;
   -webkit-font-smoothing: antialiased;
   letter-spacing: 0.01em;
@@ -379,26 +377,166 @@ textarea#code-input::placeholder { color: var(--text3); }
   transform: translateX(-50%) translateY(60px);
   background: var(--bg2); border: 1px solid var(--border2);
   color: var(--text); padding: 9px 20px; border-radius: 100px;
-  font-size: 13px; z-index: 999; transition: transform .3s ease;
+  font-size: 15px; z-index: 999; transition: transform .3s ease;
   white-space: nowrap; backdrop-filter: blur(16px);
 }
 .toast.show { transform: translateX(-50%) translateY(0); }
 
 /* =============================================
-   RESPONSIVE
+   RESPONSIVE — 태블릿
+   ============================================= */
+@media (max-width: 1024px) {
+  .layout.expanded .result-panel { width: 50%; min-width: 300px; }
+}
+
+/* =============================================
+   RESPONSIVE — 모바일
    ============================================= */
 @media (max-width: 768px) {
-  .layout { flex-direction: column; overflow-y: auto; overflow-x: hidden; }
-  .center-panel { overflow: visible; }
-  .result-panel {
-    width: 100% !important; min-width: unset !important;
-    height: 0; border-left: none; border-top: 1px solid var(--border);
-    transition: height .4s cubic-bezier(.4,0,.2,1);
+
+  /* ── 전체 레이아웃 ── */
+  body { overflow: auto; }
+  .layout {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
   }
-  .layout.expanded .result-panel { height: 60vh; width: 100% !important; }
-  .layout.expanded .center-panel { justify-content: flex-start; padding-top: 1rem; }
-  .mode-tabs { flex-wrap: wrap; }
-  .tab { font-size: 11px; padding: 4px 9px; }
-  .logo-name { display: none; }
-  .logo-img  { width: 28px; height: 28px; }
+
+  /* ── 네비게이션 ── */
+  .nav { padding: 0 1rem; height: 50px; }
+  .logo-img  { width: 32px; height: 32px; }
+  .logo-name { font-size: 16px; }
+  .btn-theme { padding: 0 12px; height: 32px; font-size: 13px; }
+
+  /* ── 중앙 패널: 여백 최소화 ── */
+  .center-panel {
+    width: 100%;
+    padding: 0.8rem 0.9rem 0;
+    overflow: visible;
+    min-height: unset;
+    justify-content: flex-start;
+  }
+  .layout.expanded .center-panel { padding-top: 0.8rem; }
+
+  /* ── 히어로: 여백 줄이고 텍스트 크기 제어 ── */
+  .hero-area {
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+  .hero-title {
+    /* clamp: 최소 1.45rem, 뷰포트 기준, 최대 1.8rem — 넘치지 않게 */
+    font-size: clamp(1.45rem, 6vw, 1.8rem);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.35rem;
+    line-height: 1.3;
+  }
+  .hero-sub {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* ── 입력 카드 ── */
+  .input-card { border-radius: 14px; max-width: 100%; }
+
+  /* ── 카드 헤더: 세로 배치 ── */
+  .card-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px 12px;
+  }
+  .lang-select {
+    width: 100%;
+    font-size: 15px;
+    padding: 9px 12px;
+    border-radius: 9px;
+  }
+
+  /* ── 탭: 2×2 그리드 ── */
+  .mode-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+    width: 100%;
+  }
+  .tab {
+    font-size: 14px;
+    padding: 10px 6px;
+    border-radius: 9px;
+    text-align: center;
+  }
+
+  /* ── 에디터 ── */
+  .line-nums { width: 38px; padding: 14px 0; }
+  .line-num  { font-size: 13px; line-height: 25px; height: 25px; }
+  textarea#code-input {
+    min-height: 170px;
+    max-height: 38vh;
+    font-size: 14px;
+    line-height: 25px;
+    padding: 14px 12px 14px 48px;
+  }
+  .layout.expanded textarea#code-input {
+    min-height: 120px;
+    max-height: 26vh;
+  }
+
+  /* ── 카드 푸터 ── */
+  .card-footer {
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 12px;
+  }
+  .footer-hint { display: none; }
+  .btn-analyze {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 11px;
+    justify-content: center;
+  }
+
+  /* ── 결과 패널 ── */
+  .result-panel {
+    width: 100% !important;
+    min-width: unset !important;
+    height: 0;
+    max-height: 0;
+    border-left: none;
+    border-top: 1px solid var(--border);
+    overflow: hidden;
+    transition: height .4s cubic-bezier(.4,0,.2,1),
+                max-height .4s cubic-bezier(.4,0,.2,1);
+  }
+  .layout.expanded .result-panel {
+    height: auto;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  /* ── 결과 헤더 ── */
+  .result-header { padding: 12px 14px; }
+  .result-header h2 { font-size: 16px; }
+  .btn-icon { width: 32px; height: 32px; font-size: 14px; }
+
+  /* ── 결과 텍스트 ── */
+  .result-body { padding: 14px 12px; }
+  .result-text {
+    font-size: 16px;
+    line-height: 1.9;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* ── 토스트 ── */
+  .toast {
+    bottom: 14px;
+    font-size: 13px;
+    padding: 8px 16px;
+    max-width: 88vw;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.4;
+  }
 }
