@@ -171,7 +171,8 @@ async function analyze() {
 
         try {
           const json = JSON.parse(data);
-          const text = json.candidates?.[0]?.content?.parts?.[0]?.text;
+          // Groq / OpenAI SSE 형식
+          const text = json.choices?.[0]?.delta?.content;
           if (text) {
             resultText.textContent += text;
             resultBody.scrollTop = resultBody.scrollHeight;
